@@ -28,28 +28,31 @@
 import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
-from  indicators_n_pop_data_25_26 import indicators_qox, indicators_qhg, indicators_qhl, \
-    indicators_qua, indicators_quy, indicators_qu9, indicators_que, indicators_qyg, indicators_qt6, \
-    indicators_qwu, indicators_qj2, indicators_qjk, indicators_qvv, indicators_qnq, indicators_qr1, \
-    indicators_qop, indicators_qrl, indicators_qgh, indicators_qm7, indicators_qoq, indicators_qks, \
-    indicators_qe1, indicators_qk1, indicators_qjm, indicators_qh8, indicators_qmm, indicators_qmj, \
-    indicators_qhm, indicators_qmf, indicators_qrv, indicators_qpm, indicators_qt1, indicators_qoc, \
-    indicators_qsl, indicators_qkk, indicators_qwe, indicators_qf7, indicators_qnc, indicators_qjg, \
-    indicators_qxu, indicators_qnx, indicators_qwo
-from indicators_n_pop_data_25_26 import m_pop_qox, m_pop_qhg, m_pop_qhl, m_pop_qua, m_pop_quy, \
-    m_pop_qu9, m_pop_que, m_pop_qyg, m_pop_qt6, m_pop_qwu, m_pop_qj2, m_pop_qjk, m_pop_qvv, \
-    m_pop_qnq, m_pop_qr1, m_pop_qop, m_pop_qrl, m_pop_qgh, m_pop_qm7, m_pop_qoq, m_pop_qks, \
-    m_pop_qe1, m_pop_qk1, m_pop_qjm, m_pop_qh8, m_pop_qmm, m_pop_qmj, m_pop_qhm, m_pop_qmf, \
-    m_pop_qrv, m_pop_qpm, m_pop_qt1, m_pop_qoc, m_pop_qsl, m_pop_qkk, m_pop_qwe, m_pop_qf7, \
-    m_pop_qnc, m_pop_qjg, m_pop_qxu, m_pop_qnx, m_pop_qwo
+# from  indicators_n_pop_data_25_26 import indicators_qox, indicators_qhg, indicators_qhl, \
+#    indicators_qua, indicators_quy, indicators_qu9, indicators_que, indicators_qyg, indicators_qt6, \
+#    indicators_qwu, indicators_qj2, indicators_qjk, indicators_qvv, indicators_qnq, indicators_qr1, \
+#    indicators_qop, indicators_qrl, indicators_qgh, indicators_qm7, indicators_qoq, indicators_qks, \
+#    indicators_qe1, indicators_qk1, indicators_qjm, indicators_qh8, indicators_qmm, indicators_qmj, \
+#    indicators_qhm, indicators_qmf, indicators_qrv, indicators_qpm, indicators_qt1, indicators_qoc, \
+#    indicators_qsl, indicators_qkk, indicators_qwe, indicators_qf7, indicators_qnc, indicators_qjg, \
+#    indicators_qxu, indicators_qnx, indicators_qwo
+# from indicators_n_pop_data_25_26 import m_pop_qox, m_pop_qhg, m_pop_qhl, m_pop_qua, m_pop_quy, \
+#    m_pop_qu9, m_pop_que, m_pop_qyg, m_pop_qt6, m_pop_qwu, m_pop_qj2, m_pop_qjk, m_pop_qvv, \
+#    m_pop_qnq, m_pop_qr1, m_pop_qop, m_pop_qrl, m_pop_qgh, m_pop_qm7, m_pop_qoq, m_pop_qks, \
+#    m_pop_qe1, m_pop_qk1, m_pop_qjm, m_pop_qh8, m_pop_qmm, m_pop_qmj, m_pop_qhm, m_pop_qmf, \
+#    m_pop_qrv, m_pop_qpm, m_pop_qt1, m_pop_qoc, m_pop_qsl, m_pop_qkk, m_pop_qwe, m_pop_qf7, \
+#    m_pop_qnc, m_pop_qjg, m_pop_qxu, m_pop_qnx, m_pop_qwo
 
-from indicators_n_pop_data_25_26 import f_pop_qox, f_pop_qhg, f_pop_qhl, f_pop_qua, f_pop_quy, \
-    f_pop_qu9, f_pop_que, f_pop_qyg, f_pop_qt6, f_pop_qwu, f_pop_qj2, f_pop_qjk, f_pop_qvv, \
-    f_pop_qnq, f_pop_qr1, f_pop_qop, f_pop_qrl, f_pop_qgh, f_pop_qm7, f_pop_qoq, f_pop_qks, \
-    f_pop_qe1, f_pop_qk1, f_pop_qjm, f_pop_qh8, f_pop_qmm, f_pop_qmj, f_pop_qhm, f_pop_qmf, \
-    f_pop_qrv, f_pop_qpm, f_pop_qt1, f_pop_qoc, f_pop_qsl, f_pop_qkk, f_pop_qwe, f_pop_qf7, \
-    f_pop_qnc, f_pop_qjg, f_pop_qxu, f_pop_qnx, f_pop_qwo
+# from indicators_n_pop_data_25_26 import f_pop_qox, f_pop_qhg, f_pop_qhl, f_pop_qua, f_pop_quy, \
+#    f_pop_qu9, f_pop_que, f_pop_qyg, f_pop_qt6, f_pop_qwu, f_pop_qj2, f_pop_qjk, f_pop_qvv, \
+#    f_pop_qnq, f_pop_qr1, f_pop_qop, f_pop_qrl, f_pop_qgh, f_pop_qm7, f_pop_qoq, f_pop_qks, \
+#    f_pop_qe1, f_pop_qk1, f_pop_qjm, f_pop_qh8, f_pop_qmm, f_pop_qmj, f_pop_qhm, f_pop_qmf, \
+#    f_pop_qrv, f_pop_qpm, f_pop_qt1, f_pop_qoc, f_pop_qsl, f_pop_qkk, f_pop_qwe, f_pop_qf7, \
+#    f_pop_qnc, f_pop_qjg, f_pop_qxu, f_pop_qnx, f_pop_qwo
 
+from "indicators_n_pop_data_25_26.py":{
+url: "https://raw.githubusercontent.com/pete4nhs/efit-tool-stlite/refs/heads/main/indicators_n_pop_data_25_26.py"
+} import indicators_qox
 
 # Set page configuration
 st.set_page_config(
